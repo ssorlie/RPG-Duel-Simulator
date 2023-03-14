@@ -1,0 +1,81 @@
+﻿@model Character
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Banish your fighter</h1>
+
+<form method="post" asp-action="DeletePOST">
+    <input asp-for="CharacterId" hidden />
+    <div class="border p-2 mt-3">
+        <div class="row pb-2">
+            <h2>Delete Character</h2>
+            <hr />
+        </div>
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3">
+            <label asp-for="CharacterName"></label>
+            <input asp-for="CharacterName" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="CharacterType"></label>
+            <input asp-for="CharacterType" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Level"></label>
+            <input asp-for="Level" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Str"></label>
+            <input asp-for="Str" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Intl"></label>
+            <input asp-for="Intl" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Wil"></label>
+            <input asp-for="Wil" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Agl"></label>
+            <input asp-for="Agl" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Spd"></label>
+            <input asp-for="Spd" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="End"></label>
+            <input asp-for="End" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Per"></label>
+            <input asp-for="Per" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Luck"></label>
+            <input asp-for="Luck" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Equipment"></label>
+            <input asp-for="Equipment" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="CharacterDescription">Character Description</label>
+            <input asp-for="CharacterDescription" disabled class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
+        <a asp-controller="Character" asp-action="Index" class="btn btn-secondary" style="width:150px">
+            Back to List
+        </a>
+        <a asp-controller="Character" asp-action="Details" asp-route-CharacterId="@Model?.CharacterId" class="btn btn-secondary" style="width:150px">
+            Back to Details
+        </a>
+    </div>
+</form>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial.cshtml" />
+}

@@ -1,0 +1,89 @@
+﻿@model Character
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create your fighter</h1>
+
+<form method="post">
+    <div class="border p-2 mt-3">
+        <div class="row pb-2">
+            <h2>Create character</h2>
+            <hr />
+        </div>
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3">
+            <label asp-for="CharacterName"></label>
+            <input asp-for="CharacterName" class="form-control" />
+            <span asp-validation-for="CharacterName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="CharacterType"></label>
+            <input asp-for="CharacterType" class="form-control" />
+            <span asp-validation-for="CharacterType" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Level"></label>
+            <input asp-for="Level" class="form-control" />
+            <span asp-validation-for="Level" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Str"></label>
+            <input asp-for="Str" class="form-control" />
+            <span asp-validation-for="Str" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Intl"></label>
+            <input asp-for="Intl" class="form-control" />
+            <span asp-validation-for="Intl" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Wil"></label>
+            <input asp-for="Wil" class="form-control" />
+            <span asp-validation-for="Wil" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Agl"></label>
+            <input asp-for="Agl" class="form-control" />
+            <span asp-validation-for="Agl" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Spd"></label>
+            <input asp-for="Spd" class="form-control" />
+            <span asp-validation-for="Spd" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="End"></label>
+            <input asp-for="End" class="form-control" />
+            <span asp-validation-for="End" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Per"></label>
+            <input asp-for="Per" class="form-control" />
+            <span asp-validation-for="Per" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Luck"></label>
+            <input asp-for="Luck" class="form-control" />
+            <span asp-validation-for="Luck" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Equipment"></label>
+            <input asp-for="Equipment" class="form-control" />
+            <span asp-validation-for="Equipment" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="CharacterDescription">Character Description</label>
+            <input asp-for="CharacterDescription" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+        <a asp-controller="Character" asp-action="Index" class="btn btn-secondary" style="width:150px">
+            Back to List
+        </a>
+    </div>
+</form>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial.cshtml" />
+}
